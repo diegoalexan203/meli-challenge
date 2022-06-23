@@ -1,0 +1,6 @@
+framework module Pods_diego8a_MeliApp {
+  umbrella header "Pods-diego8a.MeliApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
