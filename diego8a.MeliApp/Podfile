@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'diego8a.MeliApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  # Pods for diego8a.MeliApp
+  pod 'RxSwift', '~> 5.1'
+  pod 'RxCocoa', '~> 5'
+  
+  target 'diego8a.MeliAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'RxSwift', '~> 5.1'
+    pod 'RxCocoa', '~> 5'
+    pod 'RxTest'
+  end
+
+end

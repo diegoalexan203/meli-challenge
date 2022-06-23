@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomProductTableViewCell" customModule="diego8a_MeliApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CustomProductCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomProductCell" rowHeight="200" id="738-c2-Hco" customClass="CustomProductTableViewCell" customModule="diego8a_MeliApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="738-c2-Hco" id="Qme-N1-S2P">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ue2-JZ-ZIb">
+                        <rect key="frame" x="10" y="10" width="96" height="80"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqH-b3-oGX">
+                        <rect key="frame" x="116" y="15" width="192" height="70"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ue2-JZ-ZIb" firstAttribute="leading" secondItem="Qme-N1-S2P" secondAttribute="leading" constant="10" id="5N4-pS-xa6"/>
+                    <constraint firstAttribute="bottom" secondItem="ue2-JZ-ZIb" secondAttribute="bottom" constant="10" id="5s0-1V-ezf"/>
+                    <constraint firstItem="wqH-b3-oGX" firstAttribute="height" secondItem="Qme-N1-S2P" secondAttribute="height" multiplier="0.7" id="Iv5-Ni-tNU"/>
+                    <constraint firstItem="ue2-JZ-ZIb" firstAttribute="top" secondItem="Qme-N1-S2P" secondAttribute="top" constant="10" id="Lmy-CL-JMc"/>
+                    <constraint firstItem="wqH-b3-oGX" firstAttribute="width" secondItem="Qme-N1-S2P" secondAttribute="width" multiplier="0.6" id="OZR-FM-SXX"/>
+                    <constraint firstItem="wqH-b3-oGX" firstAttribute="leading" secondItem="ue2-JZ-ZIb" secondAttribute="trailing" constant="10" id="a4N-dQ-MQW"/>
+                    <constraint firstItem="ue2-JZ-ZIb" firstAttribute="width" secondItem="Qme-N1-S2P" secondAttribute="width" multiplier="0.3" id="p7r-iK-6g2"/>
+                    <constraint firstItem="wqH-b3-oGX" firstAttribute="centerY" secondItem="Qme-N1-S2P" secondAttribute="centerY" id="xDW-A9-SqP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="productImageView" destination="ue2-JZ-ZIb" id="76W-R4-khW"/>
+                <outlet property="productNameLabel" destination="wqH-b3-oGX" id="CzB-EK-0jO"/>
+            </connections>
+            <point key="canvasLocation" x="-9" y="-61"/>
+        </tableViewCell>
+    </objects>
+</document>

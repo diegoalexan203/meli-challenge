@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "268205826549-Mercado-Libre-3-@1x.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "268205826549-Mercado-Libre-3-@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "268205826549-Mercado-Libre-3-@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
