@@ -12,7 +12,7 @@ class MeliApiRepository: MeliApiRepositoryProtocol {
     func getProductsByName(productName: String) throws -> Observable<[Result]> {
         return Observable.create{ observer in
             let session = URLSession.shared
-            var parameter = productName.replacingOccurrences(of: " ", with: "%20")
+            let parameter = productName.replacingOccurrences(of: " ", with: "%20")
             var request = URLRequest(url: URL(string: Constants.URL.main + Constants.Endpoints.urlProduct + "?q=" + parameter)!)
             request.httpMethod = "GET"
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")

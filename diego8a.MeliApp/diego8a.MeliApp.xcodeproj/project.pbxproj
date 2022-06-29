@@ -48,6 +48,11 @@
 		5B7F70582864D10B003CE2F3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B938FA42864586000FA25B0 /* DetailsViewController.swift */; };
 		5B938FA62864586000FA25B0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B938FA42864586000FA25B0 /* DetailsViewController.swift */; };
 		5B938FA72864586000FA25B0 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B938FA52864586000FA25B0 /* DetailsViewController.xib */; };
+		5BB36A9428651DB300442FC5 /* ProductTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB36A9328651DB300442FC5 /* ProductTableViewCellDelegate.swift */; };
+		5BE22C98286BF75000C4F7E2 /* DetailNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE22C96286BF75000C4F7E2 /* DetailNativeViewController.swift */; };
+		5BE22C99286BF75000C4F7E2 /* DetailNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE22C96286BF75000C4F7E2 /* DetailNativeViewController.swift */; };
+		5BE22C9A286BF75000C4F7E2 /* DetailNativeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE22C97286BF75000C4F7E2 /* DetailNativeViewController.xib */; };
+		5BE22C9B286BF75000C4F7E2 /* DetailNativeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE22C97286BF75000C4F7E2 /* DetailNativeViewController.xib */; };
 		C995E8279457ADD97DE9534E /* Pods_diego8a_MeliApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FB1D7C164B5AD79DCE0D60 /* Pods_diego8a_MeliApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +99,9 @@
 		5B7F70562864C9F4003CE2F3 /* FakeMeliServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeMeliServices.swift; sourceTree = "<group>"; };
 		5B938FA42864586000FA25B0 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		5B938FA52864586000FA25B0 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		5BB36A9328651DB300442FC5 /* ProductTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		5BE22C96286BF75000C4F7E2 /* DetailNativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNativeViewController.swift; sourceTree = "<group>"; };
+		5BE22C97286BF75000C4F7E2 /* DetailNativeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailNativeViewController.xib; sourceTree = "<group>"; };
 		B3FB1D7C164B5AD79DCE0D60 /* Pods_diego8a_MeliApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_diego8a_MeliApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD193228BEA24095ABBEB1E /* Pods-diego8a.MeliApp-diego8a.MeliAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diego8a.MeliApp-diego8a.MeliAppUITests.release.xcconfig"; path = "Target Support Files/Pods-diego8a.MeliApp-diego8a.MeliAppUITests/Pods-diego8a.MeliApp-diego8a.MeliAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CE46495A0E136205BC6E1B87 /* Pods-diego8a.MeliAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diego8a.MeliAppTests.debug.xcconfig"; path = "Target Support Files/Pods-diego8a.MeliAppTests/Pods-diego8a.MeliAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +212,8 @@
 				5B44441C28642EA500D19F14 /* HomeViewController+Extension.swift */,
 				5B938FA42864586000FA25B0 /* DetailsViewController.swift */,
 				5B938FA52864586000FA25B0 /* DetailsViewController.xib */,
+				5BE22C96286BF75000C4F7E2 /* DetailNativeViewController.swift */,
+				5BE22C97286BF75000C4F7E2 /* DetailNativeViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,6 +273,7 @@
 			children = (
 				5B44441728641CE200D19F14 /* CustomProductTableViewCell.xib */,
 				5B4444232864473C00D19F14 /* CustomProductTableViewCell.swift */,
+				5BB36A9328651DB300442FC5 /* ProductTableViewCellDelegate.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -394,6 +405,7 @@
 				5B4443C5285FFD1F00D19F14 /* LaunchScreen.storyboard in Resources */,
 				5B4443C2285FFD1F00D19F14 /* Assets.xcassets in Resources */,
 				5B44441A28641CE200D19F14 /* CustomProductTableViewCell.xib in Resources */,
+				5BE22C9A286BF75000C4F7E2 /* DetailNativeViewController.xib in Resources */,
 				5B4443C0285FFD1E00D19F14 /* Main.storyboard in Resources */,
 				5B44441328619E0900D19F14 /* HomeViewController.xib in Resources */,
 				5B938FA72864586000FA25B0 /* DetailsViewController.xib in Resources */,
@@ -406,6 +418,7 @@
 			files = (
 				5B44441B28641CE200D19F14 /* CustomProductTableViewCell.xib in Resources */,
 				5B44441428619E0900D19F14 /* HomeViewController.xib in Resources */,
+				5BE22C9B286BF75000C4F7E2 /* DetailNativeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE22C98286BF75000C4F7E2 /* DetailNativeViewController.swift in Sources */,
 				5B4443B9285FFD1E00D19F14 /* AppDelegate.swift in Sources */,
 				5B4443BB285FFD1E00D19F14 /* SceneDelegate.swift in Sources */,
 				5B4443F92860EA2B00D19F14 /* Product.swift in Sources */,
@@ -509,6 +523,7 @@
 				5B44440D286186CC00D19F14 /* HomeViewModel.swift in Sources */,
 				5B44440A286184C300D19F14 /* ViewModelProtocol.swift in Sources */,
 				5B4443F12860E25200D19F14 /* MeliApiRepository.swift in Sources */,
+				5BB36A9428651DB300442FC5 /* ProductTableViewCellDelegate.swift in Sources */,
 				5B44442128642FF300D19F14 /* Extensions.swift in Sources */,
 				5B4443FF28611B6300D19F14 /* Category.swift in Sources */,
 				5B44441128619E0900D19F14 /* HomeViewController.swift in Sources */,
@@ -527,6 +542,7 @@
 				5B44440728617DA100D19F14 /* MeliService.swift in Sources */,
 				5B44440428617D1400D19F14 /* MeliServiceProtocol.swift in Sources */,
 				5B44441E28642EA500D19F14 /* HomeViewController+Extension.swift in Sources */,
+				5BE22C99286BF75000C4F7E2 /* DetailNativeViewController.swift in Sources */,
 				5B7F70572864C9F4003CE2F3 /* FakeMeliServices.swift in Sources */,
 				5B44441228619E0900D19F14 /* HomeViewController.swift in Sources */,
 				5B4443F22860E25200D19F14 /* MeliApiRepository.swift in Sources */,

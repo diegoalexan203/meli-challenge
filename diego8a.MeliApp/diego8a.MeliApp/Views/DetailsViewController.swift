@@ -10,15 +10,22 @@ import WebKit
 
 class DetailsViewController: UIViewController {
 
-
+    // MARK: - Outlet
     @IBOutlet weak var detailsWkWebview: WKWebView!
+    
+    // MARK: - Properties
     var productLink: String
+    
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        
         let link = URL(string: self.productLink)
         let request = URLRequest(url: link!)
         detailsWkWebview?.load(request)
+        
+        
     }
 
     init(with productLink: String){
@@ -30,7 +37,7 @@ class DetailsViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    // MARK: - Methods
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }

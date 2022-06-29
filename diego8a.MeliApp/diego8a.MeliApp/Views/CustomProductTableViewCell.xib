@@ -19,26 +19,42 @@
                         <rect key="frame" x="10" y="10" width="96" height="80"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqH-b3-oGX">
-                        <rect key="frame" x="116" y="15" width="192" height="70"/>
+                        <rect key="frame" x="116" y="0.0" width="192" height="60"/>
                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXe-Ml-gVQ">
+                        <rect key="frame" x="106" y="60" width="195" height="31"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Ver en Mercado Libre">
+                            <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="viewInButtonAction:" destination="738-c2-Hco" eventType="touchUpInside" id="nNd-H2-YOI"/>
+                            <action selector="viewInMercadoLibreButtonAction:" destination="-1" eventType="touchUpInside" id="y3b-4N-anj"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ue2-JZ-ZIb" firstAttribute="leading" secondItem="Qme-N1-S2P" secondAttribute="leading" constant="10" id="5N4-pS-xa6"/>
                     <constraint firstAttribute="bottom" secondItem="ue2-JZ-ZIb" secondAttribute="bottom" constant="10" id="5s0-1V-ezf"/>
-                    <constraint firstItem="wqH-b3-oGX" firstAttribute="height" secondItem="Qme-N1-S2P" secondAttribute="height" multiplier="0.7" id="Iv5-Ni-tNU"/>
+                    <constraint firstItem="wqH-b3-oGX" firstAttribute="height" secondItem="Qme-N1-S2P" secondAttribute="height" multiplier="0.6" id="Iv5-Ni-tNU"/>
                     <constraint firstItem="ue2-JZ-ZIb" firstAttribute="top" secondItem="Qme-N1-S2P" secondAttribute="top" constant="10" id="Lmy-CL-JMc"/>
+                    <constraint firstItem="wqH-b3-oGX" firstAttribute="top" secondItem="Qme-N1-S2P" secondAttribute="top" id="NjD-M8-s7o"/>
                     <constraint firstItem="wqH-b3-oGX" firstAttribute="width" secondItem="Qme-N1-S2P" secondAttribute="width" multiplier="0.6" id="OZR-FM-SXX"/>
+                    <constraint firstItem="yXe-Ml-gVQ" firstAttribute="top" secondItem="wqH-b3-oGX" secondAttribute="bottom" id="RVN-tR-Anm"/>
+                    <constraint firstItem="yXe-Ml-gVQ" firstAttribute="height" secondItem="Qme-N1-S2P" secondAttribute="height" multiplier="0.31" id="RlT-Ax-6Ez"/>
                     <constraint firstItem="wqH-b3-oGX" firstAttribute="leading" secondItem="ue2-JZ-ZIb" secondAttribute="trailing" constant="10" id="a4N-dQ-MQW"/>
                     <constraint firstItem="ue2-JZ-ZIb" firstAttribute="width" secondItem="Qme-N1-S2P" secondAttribute="width" multiplier="0.3" id="p7r-iK-6g2"/>
-                    <constraint firstItem="wqH-b3-oGX" firstAttribute="centerY" secondItem="Qme-N1-S2P" secondAttribute="centerY" id="xDW-A9-SqP"/>
+                    <constraint firstItem="yXe-Ml-gVQ" firstAttribute="leading" secondItem="ue2-JZ-ZIb" secondAttribute="trailing" id="pi4-SJ-7As"/>
+                    <constraint firstItem="yXe-Ml-gVQ" firstAttribute="width" secondItem="Qme-N1-S2P" secondAttribute="width" multiplier="0.609375" id="v0F-Ta-FHd"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="productImageView" destination="ue2-JZ-ZIb" id="76W-R4-khW"/>
                 <outlet property="productNameLabel" destination="wqH-b3-oGX" id="CzB-EK-0jO"/>
+                <outlet property="viewInButton" destination="yXe-Ml-gVQ" id="I1P-jx-Ogm"/>
             </connections>
             <point key="canvasLocation" x="-9" y="-61"/>
         </tableViewCell>

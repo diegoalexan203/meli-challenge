@@ -18,7 +18,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
         cell.productImageView.imageFromServerURL(urlString: products[indexPath.row].thumbnail, placeHolderImage: UIImage(named: "DefaultImage")!)
         cell.productNameLabel.text = products[indexPath.row].title
-
+        cell.delegate = self
+        cell.url = products[indexPath.row].permalink
         return cell
     }
 
@@ -27,7 +28,19 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DetailsViewController(with: products[indexPath.row].permalink)
+        let vc = DetailNativeViewController(with: products[indexPath.row])
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func navigateToMercadolibre(urlToNavigate:String){
+        let vc = DetailsViewController(with: urlToNavigate)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
+}
+
+extension HomeViewController: ProductTableViewCellDelegate{
+    func viewInTableViewCellButton(urlToNavigate: String) {
+        self.navigateToMercadolibre(urlToNavigate: urlToNavigate)
     }
 }

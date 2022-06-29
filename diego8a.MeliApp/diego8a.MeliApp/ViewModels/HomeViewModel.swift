@@ -11,6 +11,7 @@ import RxSwift
 
 class HomeViewModel: ViewModelProtocol {
     
+    // MARK: - Properties
     var meliService: MeliServiceProtocol
     let disposeBag = DisposeBag()
     let input: Input
@@ -38,6 +39,7 @@ class HomeViewModel: ViewModelProtocol {
         var products = BehaviorRelay<[Result]?>(value: nil)
     }
 
+    // MARK: - Methods
     func getProducts(){
         input.productName.subscribe(onNext: { name in
             if name != "" {

@@ -9,18 +9,28 @@ import RxSwift
 import UIKit
 
 class HomeViewController: UIViewController {
-   @IBAction func SearchButtonClick(_ sender: Any) {
-        viewModel.input.productName.accept(SearchProductTextField.text)
-    }
-
-    public var products = [Result]()
+   
+    // MARK: - Outlet
     @IBOutlet weak var productsTableview: UITableView!
     @IBOutlet weak var SearchProductTextField: UITextField!
+    
+    // MARK: - Properties
+    public var products = [Result]()
     public var viewModel = HomeViewModel()
     let disposeBag = DisposeBag()
     var searching = false
     let searchController = UISearchController()
     
+    // MARK: - Outlet Events
+   @IBAction func SearchButtonClick(_ sender: Any) {
+       guard let name = SearchProductTextField.text, !name.isEmpty else {
+           self.showAlert(title: "Alerta", message: "Debe digitar el nombre del producto")
+           return
+       }
+       viewModel.input.productName.accept(name)
+    }
+    
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Mercado Libre"
@@ -35,6 +45,12 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         configureTableView()
         bind()
+    }
+    
+    func showAlert (title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func bind() {
